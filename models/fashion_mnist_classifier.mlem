@@ -1,0 +1,35 @@
+artifacts:
+  data:
+    hash: 96674ef4b4a99f0f7db2abecadf905c3
+    size: 638720
+    uri: fashion_mnist_classifier
+call_orders:
+  __call__:
+  - - model
+    - __call__
+object_type: model
+processors:
+  model:
+    io:
+      save_format: h5
+      type: tf_keras
+    methods:
+      __call__:
+        args: []
+        name: __call__
+        returns:
+          type: unspecified
+        varargs: args
+        varargs_type:
+          ptype: NoneType
+          type: primitive
+        varkw: kwargs
+    type: tf_keras
+requirements:
+- module: keras
+  package_name: keras-nightly
+  version: 2.9.0
+- module: numpy
+  version: 1.22.3
+- module: tensorflow
+  version: 2.9.1
